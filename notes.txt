@@ -1,0 +1,7 @@
+python encode_image.py saved_models/stegastamp_pretrained --image im1.png  --save_dir out/test/ --secret T3$t_i1
+
+python encode_image.py saved_models/stegastamp_pretrained --images_dir img  --save_dir out/test/ --secret T3$t_iM
+
+    python decode_image.py saved_models/stegastamp_pretrained --image out/test_img2_hidden.png
+
+python detector.py --detector_model detector_models/stegastamp_detector --decoder_model saved_models/stegastamp_pretrained --video vid/test_vid5.mp4 --save_video out/TEST_VID5_OPT3.mp4 --visualize_detector
